@@ -11,6 +11,12 @@ else:
 MIN_LENGTH = 10
 
 
+def main():
+    """Display password or stars."""
+    password = get_password()
+    display_stars(password)
+
+
 def get_password():
     """Get user's password print stars."""
     user_password = input("Enter password: ")
@@ -23,12 +29,6 @@ def get_password():
 def display_stars(user_password):
     """Print stars."""
     print('*' * len(user_password))
-
-
-def main():
-    """Display password or stars."""
-    password = get_password()
-    display_stars(password)
 
 
 main()
