@@ -7,6 +7,7 @@ NUMBER_OF_LINE = 6
 
 
 def main():
+    """Generate quick picks."""
     # Get the number of quick picks
     number_quick_picks = int(input("How many quick picks? "))
     while number_quick_picks < 0:
