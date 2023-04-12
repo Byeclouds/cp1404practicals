@@ -1,11 +1,13 @@
 FILENAME = "wimbledon.csv"
+CHAMPIONS = 2
+COUNTRY = 1
 
 
 def main():
     #  Create the main function of the program
-    data = get_data(FILENAME)
-    champions = get_champions(data)
-    countries = list(get_countries(data))
+    data = read_data(FILENAME)
+    champions = display_champions(data)
+    countries = list(display_countries(data))
     countries.sort()
 
     print("Wimbledon Champions: ")
@@ -16,7 +18,7 @@ def main():
     print(",".join(countries))
 
 
-def get_data(filename):
+def read_data(filename):
     # Get the CSV file and read its data
     data = []
     with open(filename, "r", encoding="utf-8-sig") as in_file:
@@ -27,11 +29,11 @@ def get_data(filename):
     return data
 
 
-def get_champions(data):
+def display_champions(data):
     # Counts the numbers for each champion
     champions = {}
     for row in data:
-        champion = row[2]
+        champion = row[CHAMPIONS]
         if champion in champions:
             champions[champion] += 1
         else:
@@ -39,11 +41,11 @@ def get_champions(data):
     return champions
 
 
-def get_countries(data):
+def display_countries(data):
     # Use the CSV data to get the countries
     countries = set()
     for row in data:
-        countries.add(row[1])
+        countries.add(row[COUNTRY])
     return countries
 
 
