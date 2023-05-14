@@ -6,7 +6,7 @@ from kivy.uix.label import Label
 class DynamicLabelsApp(App):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.names = ["James", "Kenny", "Yulin", "Steve", "Joe"]
+        self.names = ["James", "Kenny", "Zhenqi", "Steve", "Joe"]
 
     def build(self):
         self.title = "Dynamic Labels"
