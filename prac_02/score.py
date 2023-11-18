@@ -18,7 +18,7 @@ def main():
 
 
 def get_status(score):
-    """Get the score‘s status. """
+    """Get the status of scores . """
     if score < 0 or score > 100:
         return "Invalid score"
     elif score >= 90:
